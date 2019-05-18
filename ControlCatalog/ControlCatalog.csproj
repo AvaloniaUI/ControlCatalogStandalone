@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>    
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="**\*.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <AvaloniaResource Include="**\*.xaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Include="Assets\*" />
+    <AvaloniaResource Include="Assets\Fonts\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\SourceSansPro-Bold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\SourceSansPro-BoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\SourceSansPro-Italic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\SourceSansPro-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.8.1-cibuild0002425-beta" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.8.1-cibuild0002425-beta" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.8.1-cibuild0002425-beta" />
+
+  </ItemGroup>
+</Project>
