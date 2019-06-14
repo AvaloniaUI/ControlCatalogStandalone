@@ -8,6 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ControlCatalog\ControlCatalog.csproj" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.8.1-cibuild0002425-beta"/>
+    <PackageReference Include="Avalonia.Desktop" Version="0.8.1-cibuild0002889-beta"/>
   </ItemGroup>
 </Project>
