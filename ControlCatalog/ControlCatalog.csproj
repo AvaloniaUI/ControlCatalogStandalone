@@ -20,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.8.1-cibuild0002425-beta" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.8.1-cibuild0002425-beta" />
-    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.8.1-cibuild0002425-beta" />
+    <PackageReference Include="Avalonia" Version="0.9.0" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.0" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.9.0" />
 
   </ItemGroup>
 </Project>

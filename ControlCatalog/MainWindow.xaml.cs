@@ -6,6 +6,7 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using ControlCatalog.ViewModels;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ControlCatalog
@@ -13,6 +14,7 @@ namespace ControlCatalog
     public class MainWindow : Window
     {
         private WindowNotificationManager _notificationArea;
+        private NativeMenu _recentMenu;
 
         public MainWindow()
         {
@@ -28,6 +30,27 @@ namespace ControlCatalog
             };
 
             DataContext = new MainWindowViewModel(_notificationArea);
+            _recentMenu = ((NativeMenu.GetMenu(this).Items[0] as NativeMenuItem).Menu.Items[2] as NativeMenuItem).Menu;
+            var mainMenu = this.FindControl<Menu>("MainMenu");
+            mainMenu.AttachedToVisualTree += MenuAttached;
+        }
+
+        public void MenuAttached(object sender, VisualTreeAttachmentEventArgs e)
+        {
+            if (NativeMenu.GetIsNativeMenuExported(this) && sender is Menu mainMenu)
+            {
+                mainMenu.IsVisible = false;
+            }
+        }
+
+        public void OnOpenClicked(object sender, EventArgs args)
+        {
+            _recentMenu.Items.Insert(0, new NativeMenuItem("Item " + (_recentMenu.Items.Count + 1)));
+        }
+
+        public void OnCloseClicked(object sender, EventArgs args)
+        {
+            Close();
         }
 
         private void InitializeComponent()
