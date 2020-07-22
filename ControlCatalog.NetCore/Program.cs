@@ -58,7 +58,8 @@ namespace ControlCatalog.NetCore
                 .With(new X11PlatformOptions
                 {
                     EnableMultiTouch = true,
-                    UseDBusMenu = true
+                    UseDBusMenu = true, UseDeferredRendering=false,
+		    GlxRendererBlacklist = new System.Collections.Generic.List<string>()
                 })
                 .With(new Win32PlatformOptions
                 {
