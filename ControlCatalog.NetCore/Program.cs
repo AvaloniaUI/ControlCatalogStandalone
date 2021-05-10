@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using Avalonia;
-using Avalonia.ReactiveUI;
 using Avalonia.Dialogs;
 
 namespace ControlCatalog.NetCore
@@ -58,7 +57,8 @@ namespace ControlCatalog.NetCore
                 .With(new X11PlatformOptions
                 {
                     EnableMultiTouch = true,
-                    UseDBusMenu = true
+                    UseDBusMenu = true, UseDeferredRendering=false,
+		    GlxRendererBlacklist = new System.Collections.Generic.List<string>()
                 })
                 .With(new Win32PlatformOptions
                 {
@@ -66,7 +66,6 @@ namespace ControlCatalog.NetCore
                     AllowEglInitialization = true
                 })
                 .UseSkia()
-                .UseReactiveUI()
                 .UseManagedSystemDialogs();
 
         static void SilenceConsole()

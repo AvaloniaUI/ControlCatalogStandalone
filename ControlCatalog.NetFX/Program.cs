@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using Avalonia;
-using Avalonia.ReactiveUI;
 using Avalonia.Dialogs;
 
 namespace ControlCatalog.NetCore
@@ -34,7 +33,6 @@ namespace ControlCatalog.NetCore
                     AllowEglInitialization = true
                 })
                 .UseSkia()
-                .UseReactiveUI()
                 .UseManagedSystemDialogs();
     }
 }
