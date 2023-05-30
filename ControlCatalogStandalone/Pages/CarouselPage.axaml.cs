@@ -7,10 +7,15 @@ namespace ControlCatalogStandalone.Pages
 {
     public partial class CarouselPage : UserControl
     {
+        public CarouselPage()
+        {
+            InitializeComponent();
+        }
+        
         protected override void OnLoaded()
         {
-            left.Click += (s, e) => carousel.Previous();
-            right.Click += (s, e) => carousel.Next();
+            left.Click += (s, e) => carousel?.Previous();
+            right.Click += (s, e) => carousel?.Next();
             transition.SelectionChanged += TransitionChanged;
             orientation.SelectionChanged += TransitionChanged;
             base.OnLoaded();
