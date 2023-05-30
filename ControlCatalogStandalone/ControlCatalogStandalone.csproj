@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+  <TargetFramework>net7.0</TargetFramework>
+  <Nullable>enable</Nullable>
+  <LangVersion>latest</LangVersion>
+  <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+</PropertyGroup>
+
+
+<ItemGroup>
+  <AvaloniaResource Include="Assets\**" />
+  <EmbeddedResource Include="Assets\Fonts\SourceSansPro-Bold.ttf" />
+  <EmbeddedResource Include="Assets\Fonts\SourceSansPro-BoldItalic.ttf" />
+  <EmbeddedResource Include="Assets\Fonts\SourceSansPro-Italic.ttf" />
+  <EmbeddedResource Include="Assets\Fonts\SourceSansPro-Regular.ttf" />
+  <EmbeddedResource Include="Pages\teapot.bin" />
+</ItemGroup> 
+<ItemGroup>
+  <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+  <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+  <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
+  <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+  <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+  <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+  <PackageReference Include="System.Reactive.Linq" Version="6.0.0" />
+</ItemGroup>
+</Project>
+
