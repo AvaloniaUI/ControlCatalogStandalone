@@ -14,10 +14,6 @@ namespace ControlCatalogStandalone.Pages
             this.Get<RepeatButton>("RepeatButton").Click += OnRepeatButtonClick;
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         public void OnRepeatButtonClick(object? sender, object args)
         {

@@ -15,13 +15,9 @@ namespace ControlCatalogStandalone.Pages
     {
         public NativeEmbedPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         public async void ShowPopupDelay(object sender, RoutedEventArgs args)
         {

@@ -9,13 +9,9 @@ namespace ControlCatalogStandalone.Pages
     {
         public SplitViewPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new SplitViewPageViewModel();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

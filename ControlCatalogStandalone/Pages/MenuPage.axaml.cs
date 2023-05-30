@@ -12,14 +12,10 @@ namespace ControlCatalogStandalone.Pages
     {
         public MenuPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new MenuPageViewModel();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
         
         private MenuPageViewModel? _model;
         protected override void OnDataContextChanged(EventArgs e)

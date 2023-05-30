@@ -12,9 +12,5 @@ namespace ControlCatalogStandalone.Pages
             DataContext = new ListBoxPageViewModel();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

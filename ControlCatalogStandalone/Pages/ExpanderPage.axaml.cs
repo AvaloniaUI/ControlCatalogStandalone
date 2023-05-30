@@ -8,7 +8,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public ExpanderPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new ExpanderPageViewModel();
 
             var CollapsingDisabledExpander = this.Get<Expander>("CollapsingDisabledExpander");
@@ -18,9 +18,5 @@ namespace ControlCatalogStandalone.Pages
             ExpandingDisabledExpander.Expanding += (s, e) => { e.Cancel = true; };
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

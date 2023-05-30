@@ -10,7 +10,7 @@ namespace ControlCatalogStandalone
     {
         public DecoratedWindow()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         void SetupSide(string name, StandardCursorType cursor, WindowEdge edge)
@@ -38,7 +38,7 @@ namespace ControlCatalogStandalone
             SetupSide("TopRight", StandardCursorType.TopRightCorner, WindowEdge.NorthEast);
             SetupSide("BottomLeft", StandardCursorType.BottomLeftCorner, WindowEdge.SouthWest);
             SetupSide("BottomRight", StandardCursorType.BottomRightCorner, WindowEdge.SouthEast);
-            this.Get<Button>("MinimizeButton").Click += delegate { this.WindowState = WindowState.Minimized; };
+            this.Get<Button>("MinimizeButton").Click += delegate { WindowState = WindowState.Minimized; };
             this.Get<Button>("MaximizeButton").Click += delegate
             {
                 WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;

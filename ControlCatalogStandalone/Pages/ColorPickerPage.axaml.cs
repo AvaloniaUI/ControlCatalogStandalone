@@ -28,9 +28,5 @@ namespace ControlCatalogStandalone.Pages
             layoutRoot.Children.Add(colorPicker);
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

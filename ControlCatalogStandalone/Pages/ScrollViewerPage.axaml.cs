@@ -49,25 +49,25 @@ namespace ControlCatalogStandalone.Pages
         public bool AllowAutoHide
         {
             get => _allowAutoHide;
-            set => this.RaiseAndSetIfChanged(ref _allowAutoHide, value);
+            set => RaiseAndSetIfChanged(ref _allowAutoHide, value);
         }
 
         public bool EnableInertia
         {
             get => _enableInertia;
-            set => this.RaiseAndSetIfChanged(ref _enableInertia, value);
+            set => RaiseAndSetIfChanged(ref _enableInertia, value);
         }
 
         public ScrollBarVisibility HorizontalScrollVisibility
         {
             get => _horizontalScrollVisibility;
-            set => this.RaiseAndSetIfChanged(ref _horizontalScrollVisibility, value);
+            set => RaiseAndSetIfChanged(ref _horizontalScrollVisibility, value);
         }
 
         public ScrollBarVisibility VerticalScrollVisibility
         {
             get => _verticalScrollVisibility;
-            set => this.RaiseAndSetIfChanged(ref _verticalScrollVisibility, value);
+            set => RaiseAndSetIfChanged(ref _verticalScrollVisibility, value);
         }
 
         public List<ScrollBarVisibility> AvailableVisibility { get; }
@@ -75,19 +75,19 @@ namespace ControlCatalogStandalone.Pages
         public bool AreSnapPointsRegular
         {
             get => _areSnapPointsRegular;
-            set => this.RaiseAndSetIfChanged(ref _areSnapPointsRegular, value);
+            set => RaiseAndSetIfChanged(ref _areSnapPointsRegular, value);
         }
 
         public SnapPointsType SnapPointsType
         {
             get => _snapPointsType;
-            set => this.RaiseAndSetIfChanged(ref _snapPointsType, value);
+            set => RaiseAndSetIfChanged(ref _snapPointsType, value);
         }
 
         public SnapPointsAlignment SnapPointsAlignment
         {
             get => _snapPointsAlignment;
-            set => this.RaiseAndSetIfChanged(ref _snapPointsAlignment, value);
+            set => RaiseAndSetIfChanged(ref _snapPointsAlignment, value);
         }
         public List<SnapPointsType> AvailableSnapPointsType { get; }
         public List<SnapPointsAlignment> AvailableSnapPointsAlignment { get; }
@@ -102,9 +102,5 @@ namespace ControlCatalogStandalone.Pages
             DataContext = new ScrollViewerPageViewModel();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

@@ -13,15 +13,11 @@ namespace ControlCatalogStandalone.Pages
     {
         public NumericUpDownPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             var viewModel = new NumbersPageViewModel();
             DataContext = viewModel;
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         public static IValueConverter CultureConverter =
             new FuncValueConverter<CultureInfo, NumberFormatInfo>(c => (c ?? CultureInfo.CurrentCulture).NumberFormat);
@@ -44,13 +40,13 @@ namespace ControlCatalogStandalone.Pages
         public double DoubleValue
         {
             get { return _doubleValue; }
-            set { this.RaiseAndSetIfChanged(ref _doubleValue, value); }
+            set { RaiseAndSetIfChanged(ref _doubleValue, value); }
         }
 
         public decimal DecimalValue
         {
             get { return _decimalValue; }
-            set { this.RaiseAndSetIfChanged(ref _decimalValue, value); }
+            set { RaiseAndSetIfChanged(ref _decimalValue, value); }
         }
 
         public IList<FormatObject> Formats
@@ -93,7 +89,7 @@ namespace ControlCatalogStandalone.Pages
         public FormatObject? SelectedFormat
         {
             get { return _selectedFormat; }
-            set { this.RaiseAndSetIfChanged(ref _selectedFormat, value); }
+            set { RaiseAndSetIfChanged(ref _selectedFormat, value); }
         }
     }
 

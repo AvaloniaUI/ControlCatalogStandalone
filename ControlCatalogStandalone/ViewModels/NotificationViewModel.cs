@@ -16,22 +16,22 @@ namespace ControlCatalogStandalone.ViewModels
 
             ShowManagedNotificationCommand = MiniCommand.Create(() =>
             {
-                NotificationManager?.Show(new Avalonia.Controls.Notifications.Notification("Welcome", "Avalonia now supports Notifications.", NotificationType.Information));
+                NotificationManager?.Show(new Notification("Welcome", "Avalonia now supports Notifications.", NotificationType.Information));
             });
 
             ShowNativeNotificationCommand = MiniCommand.Create(() =>
             {
-                NotificationManager?.Show(new Avalonia.Controls.Notifications.Notification("Error", "Native Notifications are not quite ready. Coming soon.", NotificationType.Error));
+                NotificationManager?.Show(new Notification("Error", "Native Notifications are not quite ready. Coming soon.", NotificationType.Error));
             });
 
             YesCommand = MiniCommand.Create(() =>
             {
-                NotificationManager?.Show(new Avalonia.Controls.Notifications.Notification("Avalonia Notifications", "Start adding notifications to your app today."));
+                NotificationManager?.Show(new Notification("Avalonia Notifications", "Start adding notifications to your app today."));
             });
 
             NoCommand = MiniCommand.Create(() =>
             {
-                NotificationManager?.Show(new Avalonia.Controls.Notifications.Notification("Avalonia Notifications", "Start adding notifications to your app today. To find out more visit..."));
+                NotificationManager?.Show(new Notification("Avalonia Notifications", "Start adding notifications to your app today. To find out more visit..."));
             });
         }
 

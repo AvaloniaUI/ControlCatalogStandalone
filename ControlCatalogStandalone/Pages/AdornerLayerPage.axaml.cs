@@ -11,13 +11,9 @@ namespace ControlCatalogStandalone.Pages
 
         public AdornerLayerPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         private void RemoveAdorner_OnClick(object? sender, RoutedEventArgs e)
         {

@@ -8,13 +8,9 @@ namespace ControlCatalogStandalone.Pages
     {
         public CursorPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new CursorPageViewModel();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

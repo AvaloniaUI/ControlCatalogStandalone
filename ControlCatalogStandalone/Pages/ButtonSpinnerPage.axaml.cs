@@ -10,13 +10,9 @@ namespace ControlCatalogStandalone.Pages
     {
         public ButtonSpinnerPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         public void OnSpin(object sender, SpinEventArgs e)
         {

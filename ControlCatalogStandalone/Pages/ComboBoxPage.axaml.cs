@@ -10,7 +10,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public ComboBoxPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new ComboBoxPageViewModel();
         }
 

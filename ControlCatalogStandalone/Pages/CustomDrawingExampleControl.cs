@@ -120,26 +120,26 @@ namespace ControlCatalogStandalone.Pages
 
         public override void Render(DrawingContext context)
         {
-            var localBounds = new Rect(new Size(this.Bounds.Width, this.Bounds.Height));
-            var clip = context.PushClip(this.Bounds);
+            var localBounds = new Rect(new Size(Bounds.Width, Bounds.Height));
+            var clip = context.PushClip(Bounds);
             context.DrawRectangle(Brushes.White, _pen, localBounds, 1.0d);
 
-            var halfMax = Math.Max(this.Bounds.Width / 2.0d, this.Bounds.Height / 2.0d) * Math.Sqrt(2.0d);
-            var halfMin = Math.Min(this.Bounds.Width / 2.0d, this.Bounds.Height / 2.0d) / 1.3d;
-            var halfWidth = this.Bounds.Width / 2.0d;
-            var halfHeight = this.Bounds.Height / 2.0d;
+            var halfMax = Math.Max(Bounds.Width / 2.0d, Bounds.Height / 2.0d) * Math.Sqrt(2.0d);
+            var halfMin = Math.Min(Bounds.Width / 2.0d, Bounds.Height / 2.0d) / 1.3d;
+            var halfWidth = Bounds.Width / 2.0d;
+            var halfHeight = Bounds.Height / 2.0d;
 
             // 0,0 refers to the top-left of the control now. It is not prime time to draw gui stuff because it'll be under the world 
 
-            var translateModifier = context.PushTransform(Avalonia.Matrix.CreateTranslation(new Avalonia.Vector(halfWidth, halfHeight)));
+            var translateModifier = context.PushTransform(Matrix.CreateTranslation(new Vector(halfWidth, halfHeight)));
 
             // now 0,0 refers to the ViewportCenter(X,Y). 
-            var rotationMatrix = Avalonia.Matrix.CreateRotation(Rotation);
+            var rotationMatrix = Matrix.CreateRotation(Rotation);
             var rotationModifier = context.PushTransform(rotationMatrix);
 
             // everything is rotated but not scaled 
 
-            var scaleModifier = context.PushTransform(Avalonia.Matrix.CreateScale(Scale, -Scale));
+            var scaleModifier = context.PushTransform(Matrix.CreateScale(Scale, -Scale));
 
             var mapPositionModifier = context.PushTransform(Matrix.CreateTranslation(new Vector(-ViewportCenterX, -ViewportCenterY)));
 
@@ -188,7 +188,7 @@ namespace ControlCatalogStandalone.Pages
         private Point UIPointToWorldPoint(Point inPoint, double viewportCenterX, double viewportCenterY, double scale, double rotation)
         {
             Point workingPoint = new Point(inPoint.X, -inPoint.Y);
-            workingPoint += new Vector(-this.Bounds.Width / 2.0d, this.Bounds.Height / 2.0d);
+            workingPoint += new Vector(-Bounds.Width / 2.0d, Bounds.Height / 2.0d);
             workingPoint /= scale;
 
             workingPoint = Matrix.CreateRotation(rotation).Transform(workingPoint);
@@ -206,7 +206,7 @@ namespace ControlCatalogStandalone.Pages
             // undo rotation
             workingPoint = Matrix.CreateRotation(-rotation).Transform(workingPoint);
             workingPoint *= scale;
-            workingPoint -= new Vector(-this.Bounds.Width / 2.0d, this.Bounds.Height / 2.0d);
+            workingPoint -= new Vector(-Bounds.Width / 2.0d, Bounds.Height / 2.0d);
             workingPoint = new Point(workingPoint.X, -workingPoint.Y);
 
             return workingPoint;

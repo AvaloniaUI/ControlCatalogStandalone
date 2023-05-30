@@ -11,17 +11,13 @@ namespace ControlCatalogStandalone.Pages
 
         public NotificationsPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             _viewModel = new NotificationViewModel();
 
             DataContext = _viewModel;
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
         {

@@ -17,7 +17,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public DataGridPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             var dataGridSortDescription = DataGridSortDescription.FromPath(nameof(Country.Region), ListSortDirection.Ascending, new ReversedStringComparer());
             var collectionView1 = new DataGridCollectionView(Countries.All);
@@ -70,10 +70,6 @@ namespace ControlCatalogStandalone.Pages
             e.Row.Header = e.Row.GetIndex() + 1;
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         private class ReversedStringComparer : IComparer<object>, IComparer
         {

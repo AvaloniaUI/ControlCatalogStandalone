@@ -107,7 +107,7 @@ namespace ControlCatalogStandalone.Pages
 
         public AutoCompleteBoxPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             States = BuildAllStates();
             Sentences = BuildAllSentences();
@@ -195,11 +195,6 @@ namespace ControlCatalogStandalone.Pages
                 return string.Join(" ", parts);
             }
             return string.Empty;
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
         }
     }
 }

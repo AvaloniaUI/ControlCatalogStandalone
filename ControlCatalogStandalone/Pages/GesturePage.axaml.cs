@@ -17,13 +17,9 @@ namespace ControlCatalogStandalone.Pages
 
         public GesturePage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
         {
@@ -185,7 +181,7 @@ namespace ControlCatalogStandalone.Pages
                 InitComposition(ball!);
                 if (ballCompositionVisual != null)
                 {
-                    ballCompositionVisual.Offset = defaultOffset + new System.Numerics.Vector3((float)e.Delta.X * 0.4f, (float)e.Delta.Y * 0.4f, 0) * (inverse ? -1 : 1);
+                    ballCompositionVisual.Offset = defaultOffset + new Vector3((float)e.Delta.X * 0.4f, (float)e.Delta.Y * 0.4f, 0) * (inverse ? -1 : 1);
 
                     e.Handled = true;
                 }

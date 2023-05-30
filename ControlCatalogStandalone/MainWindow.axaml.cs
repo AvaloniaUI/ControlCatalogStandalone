@@ -35,9 +35,5 @@ namespace ControlCatalogStandalone
             Close();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

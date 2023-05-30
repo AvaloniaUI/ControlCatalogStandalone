@@ -8,12 +8,8 @@ namespace ControlCatalogStandalone.Pages
     {
         public WindowCustomizationsPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

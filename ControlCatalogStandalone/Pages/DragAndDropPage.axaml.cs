@@ -14,7 +14,7 @@ namespace ControlCatalogStandalone.Pages
         private const string CustomFormat = "application/xxx-avalonia-ControlCatalogStandalone-custom";
         public DragAndDropPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             _dropState = this.Get<TextBlock>("DropState");
 
             int textCount = 0;
@@ -30,7 +30,7 @@ namespace ControlCatalogStandalone.Pages
             var dragMe = this.Get<Border>("DragMe" + suffix);
             var dragState = this.Get<TextBlock>("DragState" + suffix);
 
-            async void DoDrag(object? sender, Avalonia.Input.PointerPressedEventArgs e)
+            async void DoDrag(object? sender, PointerPressedEventArgs e)
             {
                 var dragData = new DataObject();
                 factory(dragData);
@@ -133,9 +133,5 @@ namespace ControlCatalogStandalone.Pages
             AddHandler(DragDrop.DragOverEvent, DragOver);
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

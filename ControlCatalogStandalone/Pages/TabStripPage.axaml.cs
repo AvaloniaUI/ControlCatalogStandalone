@@ -31,9 +31,5 @@ namespace ControlCatalogStandalone.Pages
             };
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

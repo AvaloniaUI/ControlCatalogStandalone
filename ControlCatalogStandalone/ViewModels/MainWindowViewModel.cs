@@ -36,7 +36,7 @@ namespace ControlCatalogStandalone.ViewModels
             {
                 var dialog = new AboutAvaloniaDialog();
 
-                if ((App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is
+                if ((Application.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.MainWindow is
                     { } mainWindow)
                 {
                     await dialog.ShowDialog(mainWindow);
@@ -44,7 +44,7 @@ namespace ControlCatalogStandalone.ViewModels
             });
             ExitCommand = MiniCommand.Create(() =>
             {
-                (App.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.Shutdown();
+                (Application.Current?.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime)?.Shutdown();
             });
 
             ToggleMenuItemCheckedCommand = MiniCommand.Create(() => { IsMenuItemChecked = !IsMenuItemChecked; });

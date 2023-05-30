@@ -10,7 +10,7 @@ namespace ControlCatalogStandalone.Pages
         public LabelsPage()
         {
             CreateDefaultPerson();
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void CreateDefaultPerson()
