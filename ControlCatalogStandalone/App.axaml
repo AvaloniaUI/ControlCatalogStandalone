@@ -27,6 +27,10 @@
       <StyleInclude x:Key="DataGridSimple" Source="avares://Avalonia.Controls.DataGrid/Themes/Simple.xaml" />
       <StyleInclude x:Key="ColorPickerFluent" Source="avares://Avalonia.Controls.ColorPicker/Themes/Fluent/Fluent.xaml" />
       <StyleInclude x:Key="ColorPickerSimple" Source="avares://Avalonia.Controls.ColorPicker/Themes/Simple/Simple.xaml" />
+      
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceInclude Source="avares://ControlCatalogStandalone/HamburgerMenu/HamburgerMenu.axaml" />
+      </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Application.Resources>
   <Application.Styles>
