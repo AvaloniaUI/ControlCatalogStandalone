@@ -9,7 +9,7 @@ public partial class PointersPage : UserControl
 {
     public PointersPage()
     {
-        this.InitializeComponent();
+        InitializeComponent();
 
         var border1 = this.Get<Border>("BorderCapture1");
         var border2 = this.Get<Border>("BorderCapture2");

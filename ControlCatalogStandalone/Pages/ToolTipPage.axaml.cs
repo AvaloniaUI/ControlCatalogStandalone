@@ -7,12 +7,8 @@ namespace ControlCatalogStandalone.Pages
     {
         public ToolTipPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

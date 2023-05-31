@@ -7,12 +7,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public BorderPage()
         {
-            this.InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
+            InitializeComponent();
         }
     }
 }

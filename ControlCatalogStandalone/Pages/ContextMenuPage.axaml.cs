@@ -12,7 +12,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public ContextMenuPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new ContextPageViewModel();
 
             var customContextRequestedBorder = this.Get<Border>("CustomContextRequestedBorder");
@@ -62,9 +62,5 @@ namespace ControlCatalogStandalone.Pages
 
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

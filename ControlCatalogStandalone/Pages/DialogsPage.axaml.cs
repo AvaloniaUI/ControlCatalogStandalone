@@ -22,7 +22,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public DialogsPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             IStorageFolder? lastSelectedDirectory = null;
             bool ignoreTextChanged = false;
@@ -439,10 +439,6 @@ CanPickFolder: {storageProvider.CanPickFolder}";
         Window GetWindow() => TopLevel.GetTopLevel(this) as Window ?? throw new NullReferenceException("Invalid Owner");
         TopLevel GetTopLevel() => TopLevel.GetTopLevel(this) ?? throw new NullReferenceException("Invalid Owner");
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }
 #pragma warning restore CS0618 // Type or member is obsolete

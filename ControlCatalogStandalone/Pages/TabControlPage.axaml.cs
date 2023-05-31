@@ -44,10 +44,6 @@ namespace ControlCatalogStandalone.Pages
             };
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         private static Bitmap LoadBitmap(string uri)
         {

@@ -11,13 +11,9 @@ namespace ControlCatalogStandalone.Pages
     {
         public PlatformInfoPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             DataContext = new PlatformInformationViewModel();
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

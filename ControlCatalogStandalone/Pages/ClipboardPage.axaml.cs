@@ -23,10 +23,6 @@ namespace ControlCatalogStandalone.Pages
             InitializeComponent();
         }
         
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         private async void CopyText(object? sender, RoutedEventArgs args)
         {
@@ -110,7 +106,7 @@ namespace ControlCatalogStandalone.Pages
         {
             if (TopLevel.GetTopLevel(this)?.Clipboard is { } clipboard)
             {
-                var files = await clipboard.GetDataAsync(DataFormats.Files) as IEnumerable<Avalonia.Platform.Storage.IStorageItem>;
+                var files = await clipboard.GetDataAsync(DataFormats.Files) as IEnumerable<IStorageItem>;
 
                 ClipboardContent.Text = files != null ? string.Join(Environment.NewLine, files.Select(f => f.TryGetLocalPath() ?? f.Name)) : string.Empty;
             }

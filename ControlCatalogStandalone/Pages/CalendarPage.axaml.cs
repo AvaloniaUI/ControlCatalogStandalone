@@ -8,7 +8,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public CalendarPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             var today = DateTime.Today; 
             var cal1 = this.Get<Calendar>("DisplayDatesCalendar");
@@ -20,9 +20,5 @@ namespace ControlCatalogStandalone.Pages
             cal2.BlackoutDates.Add(new CalendarDateRange(today.AddDays(6)));
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }

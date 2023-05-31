@@ -22,10 +22,6 @@ namespace ControlCatalogStandalone.Pages
             _croppedImage = this.Get<Image>("croppedImage");
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
 
         public void BitmapStretchChanged(object sender, SelectionChangedEventArgs e)
         {

@@ -8,7 +8,7 @@ namespace ControlCatalogStandalone.Pages
     {
         public DateTimePickerPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             this.Get<TextBlock>("DatePickerDesc").Text = "Use a DatePicker to let users set a date in your app, " +
                 "for example to schedule an appointment. The DatePicker displays three controls for month, day, and year. " +
                 "These controls are easy to use with touch or mouse, and they can be styled and configured in several different ways. " +
@@ -22,9 +22,5 @@ namespace ControlCatalogStandalone.Pages
 
         }
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
     }
 }
