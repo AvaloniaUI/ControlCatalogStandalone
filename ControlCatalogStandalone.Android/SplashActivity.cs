@@ -4,7 +4,6 @@ using Android.OS;
 using Application = Android.App.Application;
 using Avalonia;
 using Avalonia.Android;
-using Avalonia.ReactiveUI;
 
 namespace ControlCatalogStandalone.Android;
 
@@ -14,8 +13,7 @@ public class SplashActivity : AvaloniaSplashActivity<App>
     protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
     {
         return base.CustomizeAppBuilder(builder)
-            .WithInterFont()
-            .UseReactiveUI();
+            .WithInterFont();
     }
 
     protected override void OnCreate(Bundle? savedInstanceState)
