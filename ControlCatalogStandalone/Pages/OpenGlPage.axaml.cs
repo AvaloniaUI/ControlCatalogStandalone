@@ -17,7 +17,10 @@ namespace ControlCatalogStandalone.Pages
 {
     public partial class OpenGlPage : UserControl
     {
-
+        public OpenGlPage()
+        {
+            InitializeComponent();
+        }
     }
 
     public class OpenGlPageControl : OpenGlControlBase
