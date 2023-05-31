@@ -21,8 +21,9 @@
   <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
   <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
   <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
-  <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-  <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+
+  <!--Restore the Avalonia.Diagnostics conditional access later when we fix transitive packages for ColorView and DataGrid. -->
+  <PackageReference Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
   <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
   <PackageReference Include="System.Reactive.Linq" Version="6.0.0" />
 </ItemGroup>
