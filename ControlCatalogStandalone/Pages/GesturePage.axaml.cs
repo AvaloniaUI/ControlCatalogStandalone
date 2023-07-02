@@ -13,7 +13,7 @@ namespace ControlCatalogStandalone.Pages
     public partial class GesturePage : UserControl
     {
         private bool _isInit;
-        private float _currentScale;
+        private double _currentScale;
 
         public GesturePage()
         {
@@ -65,7 +65,7 @@ namespace ControlCatalogStandalone.Pages
             }
 
             _currentScale = 1;
-            Vector3 currentOffset = default;
+            Vector3D currentOffset = default;
 
             CompositionVisual? compositionVisual = null;
 
@@ -88,8 +88,7 @@ namespace ControlCatalogStandalone.Pages
 
                     if(currentOffset == default)
                     {
-                        currentOffset = new Vector3((float)compositionVisual.Offset.X, (float)compositionVisual.Offset.Y,
-                            (float)compositionVisual.Offset.Z);
+                        currentOffset = compositionVisual.Offset;
                     }
                 }
             };
@@ -120,7 +119,7 @@ namespace ControlCatalogStandalone.Pages
 
                 if (compositionVisual != null)
                 {
-                    _currentScale = (float)compositionVisual.Scale.X;
+                    _currentScale = compositionVisual.Scale.X;
                 }
             });
 
@@ -154,7 +153,7 @@ namespace ControlCatalogStandalone.Pages
 
             var ball = control.FindLogicalDescendantOfType<Border>();
 
-            Vector3 defaultOffset = default;
+            Vector3D defaultOffset = default;
 
             CompositionVisual? ballCompositionVisual = null;
 
@@ -172,9 +171,7 @@ namespace ControlCatalogStandalone.Pages
                 InitComposition(ball!);
                 if (ballCompositionVisual != null)
                 {
-                    
-                    defaultOffset = new Vector3((float)ballCompositionVisual.Offset.X, (float)ballCompositionVisual.Offset.Y,
-                        (float)ballCompositionVisual.Offset.Z);
+                    defaultOffset = ballCompositionVisual.Offset;
                 }
             };
 
