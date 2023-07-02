@@ -1,6 +1,7 @@
 using System;
 using Avalonia.Animation;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
 namespace ControlCatalogStandalone.Pages
@@ -11,14 +12,14 @@ namespace ControlCatalogStandalone.Pages
         {
             InitializeComponent();
         }
-        
-        protected override void OnLoaded()
+
+        protected override void OnLoaded(RoutedEventArgs e)
         {
             left.Click += (s, e) => carousel?.Previous();
             right.Click += (s, e) => carousel?.Next();
             transition.SelectionChanged += TransitionChanged;
             orientation.SelectionChanged += TransitionChanged;
-            base.OnLoaded();
+            base.OnLoaded(e);
         }
 
         private void TransitionChanged(object? sender, SelectionChangedEventArgs e)

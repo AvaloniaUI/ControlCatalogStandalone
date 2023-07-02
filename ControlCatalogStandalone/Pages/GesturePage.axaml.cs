@@ -88,7 +88,8 @@ namespace ControlCatalogStandalone.Pages
 
                     if(currentOffset == default)
                     {
-                        currentOffset = compositionVisual.Offset;
+                        currentOffset = new Vector3((float)compositionVisual.Offset.X, (float)compositionVisual.Offset.Y,
+                            (float)compositionVisual.Offset.Z);
                     }
                 }
             };
@@ -119,7 +120,7 @@ namespace ControlCatalogStandalone.Pages
 
                 if (compositionVisual != null)
                 {
-                    _currentScale = compositionVisual.Scale.X;
+                    _currentScale = (float)compositionVisual.Scale.X;
                 }
             });
 
@@ -171,7 +172,9 @@ namespace ControlCatalogStandalone.Pages
                 InitComposition(ball!);
                 if (ballCompositionVisual != null)
                 {
-                    defaultOffset = ballCompositionVisual.Offset;
+                    
+                    defaultOffset = new Vector3((float)ballCompositionVisual.Offset.X, (float)ballCompositionVisual.Offset.Y,
+                        (float)ballCompositionVisual.Offset.Z);
                 }
             };
 
