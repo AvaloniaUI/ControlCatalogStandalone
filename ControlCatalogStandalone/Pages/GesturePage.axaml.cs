@@ -13,7 +13,7 @@ namespace ControlCatalogStandalone.Pages
     public partial class GesturePage : UserControl
     {
         private bool _isInit;
-        private float _currentScale;
+        private double _currentScale;
 
         public GesturePage()
         {
@@ -65,7 +65,7 @@ namespace ControlCatalogStandalone.Pages
             }
 
             _currentScale = 1;
-            Vector3 currentOffset = default;
+            Vector3D currentOffset = default;
 
             CompositionVisual? compositionVisual = null;
 
@@ -153,7 +153,7 @@ namespace ControlCatalogStandalone.Pages
 
             var ball = control.FindLogicalDescendantOfType<Border>();
 
-            Vector3 defaultOffset = default;
+            Vector3D defaultOffset = default;
 
             CompositionVisual? ballCompositionVisual = null;
 
